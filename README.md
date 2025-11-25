@@ -20,7 +20,7 @@ This is a production-grade project designed to demonstrate data engineering, ETL
 
 ### Features
 
-###🔍 1. Real-Time Price Extraction
+### 🔍 1. Real-Time Price Extraction
 
 - Live price data pulled from CoinGecko API
 
