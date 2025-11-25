@@ -57,7 +57,8 @@ Dockerized PostgreSQL instance
 
 # 📊 Dashboard Preview
 
-![Dashboard](assets/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/DaaneyalKhan9/crypto-price-pipeline/main/assets/dashboard.png)
+
 
 🧱 Tech Stack
 Component -> Technology
