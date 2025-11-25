@@ -1,8 +1,8 @@
-### 📈 Crypto Price Pipeline
+# 📈 Crypto Price Pipeline
 
 A fully automated data engineering project with real-time + historical crypto price tracking.
 
-### 🚀 Overview
+# 🚀 Overview
 
 This project is a complete end-to-end data pipeline that:
 
@@ -18,7 +18,7 @@ Displays insights via an interactive Streamlit dashboard
 
 This is a production-grade project designed to demonstrate data engineering, ETL architecture, and dashboard analytics.
 
-### 💡Features
+# 💡Features
 🔹 Top 10 Crypto Live Prices
 
 Fetched via CoinGecko JSON API.
@@ -55,9 +55,9 @@ Scheduler to run pipeline automatically
 
 Dockerized PostgreSQL instance
 
-## 📊 Dashboard Preview
+# 📊 Dashboard Preview
 
-![Crypto Dashboard](assets/dashboard.png)
+![Dashboard](assets/dashboard.png)
 
 🧱 Tech Stack
 Component -> Technology
