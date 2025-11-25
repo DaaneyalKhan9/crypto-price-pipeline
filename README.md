@@ -18,52 +18,85 @@ Displays insights via an interactive Streamlit dashboard
 
 This is a production-grade project designed to demonstrate data engineering, ETL architecture, and dashboard analytics.
 
-# 💡Features
-🔹 Top 10 Crypto Live Prices
+### Features
 
-Fetched via CoinGecko JSON API.
+###🔍 1. Real-Time Price Extraction
 
-🔹 30-Day Historical Price Loader
+- Live price data pulled from CoinGecko API
 
-With automatic rate-limit handling & exponential backoff.
+- Configured for top 10 cryptocurrencies
 
-🔹 PostgreSQL Storage
+- Handles inconsistent API responses gracefully
 
-Database schema includes:
+### 🧮 2. Data Transformation
 
-coin
+- Cleans API responses
 
-price_usd
+- Converts timestamps
 
-loaded_at (timestamp)
+- Normalizes dataset into a consistent schema
 
-🔹 Interactive Dashboard
+### 🗄️ 3. PostgreSQL Data Warehouse
+Database table: crypto_prices
+| column    | type      | description        |
+| --------- | --------- | ------------------ |
+| coin      | text      | crypto symbol/name |
+| price_usd | numeric   | USD price          |
+| loaded_at | timestamp | Time of extraction |
 
-Built with Streamlit:
+📉 4. Historical Backfill
 
-Live price table
+- Fetches 30-day history for all top 10 coins
 
-Line chart of historical trends
+- Automatic 429 error handling (rate limits)
 
-Coin selector
+- Exponential backoff + cooldown to ensure data completeness
 
-🔹 Automation
+### 📊 5. Interactive Streamlit Dashboard
 
-Optional:
+- Latest prices table
 
-Scheduler to run pipeline automatically
+- A coin selector
 
-Dockerized PostgreSQL instance
+- Line chart with historical + live price trends
+
+- Clean and modern UI theme
+
+### 🤖 6. Automation
+
+- Optional extras:
+
+- Scheduler (scheduler.py) to run pipeline automatically
+
+- Docker PostgreSQL instance for isolated local storage
+
+# 🛠️ Tech Stack
+
+| Component      | Technology                   |
+| -------------- | ---------------------------- |
+| **Language**   | Python 3.13                  |
+| **API**        | CoinGecko REST API           |
+| **Database**   | PostgreSQL (Docker optional) |
+| **Libraries**  | Pandas, SQLAlchemy, Requests |
+| **Dashboard**  | Streamlit                    |
+| **Automation** | Cron / Python Scheduler      |
+
 
 # 📊 Dashboard Preview
 
 ![Dashboard](https://raw.githubusercontent.com/DaaneyalKhan9/crypto-price-pipeline/main/images/dashboard.png)
 
-🧱 Tech Stack
-Component -> Technology
-Language ->	Python 3.13
-API -> CoinGecko
-DB	-> PostgreSQL (Docker)
-Libraries -> Pandas, SQLAlchemy, Requests
-Dashboard -> Streamlit
-Automation -> Cron / Custom scheduler
+### 🎯 What I've Learned / Key Takeaways
+
+- Building production-style ETL pipelines
+
+- Handling API rate limits and 429 automatic retries
+
+- Designing a clean SQL schema
+
+- Using Dockerized PostgreSQL
+
+- Creating an interactive analytics dashboard
+
+- Automating data workflows using Python
+
